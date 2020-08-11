@@ -236,6 +236,16 @@ footer {
 		font-size: 20px;
 
 		&:hover {
+			color: black;
+		}
+	}
+
+	i {
+		font-size: 30px;
+		transition: transform 0.3s ease;
+
+		&:hover {
+			transform: skewX(-10deg);
 		}
 	}
 }
