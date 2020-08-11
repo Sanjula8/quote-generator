@@ -1,1 +1,3 @@
-# quote-generator
+# Quote Generator
+
+A simple quote generator using pure Javascript.
