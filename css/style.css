@@ -12,6 +12,7 @@ body {
   font-family: Montseratt, sans-serif;
   font-weight: 700;
   text-align: center;
+  display: block;
   align-items: center;
   justify-content: center; }
 
@@ -19,6 +20,7 @@ body {
   padding-bottom: 50px; }
 
 .quote-container {
+  margin: auto;
   width: auto;
   max-width: 900px;
   padding: 20px 30px;
@@ -70,19 +72,115 @@ button {
 .fa-twitter {
   font-size: 1.5rem; }
 
-.loader {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #6cbab6;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite; }
+/* Absolute Center Spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
 
-@keyframes spin {
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+.loading:not(:required):after {
+  content: "";
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: #47857f 1.5em 0 0 0, #47857f 1.1em 1.1em 0 0, #47857f 0 1.5em 0 0, #47857f -1.1em 1.1em 0 0, #47857f -1.5em 0 0 0, #47857f -1.1em -1.1em 0 0, #47857f 0 -1.5em 0 0, #47857f 1.1em -1.1em 0 0;
+  box-shadow: #47857f 1.5em 0 0 0, #47857f 1.1em 1.1em 0 0, #47857f 0 1.5em 0 0, #47857f -1.1em 1.1em 0 0, #47857f -1.5em 0 0 0, #47857f -1.1em -1.1em 0 0, #47857f 0 -1.5em 0 0, #47857f 1.1em -1.1em 0 0; }
+
+/* Animation */
+@-webkit-keyframes spinner {
   0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+footer .footer-container {
+  display: flex;
+  justify-content: center; }
+
+footer ul {
+  list-style-type: none; }
+
+footer li {
+  padding: 30px; }
+
+footer a {
+  text-decoration: none;
+  color: #6cbab6;
+  font-size: 20px; }
 
 @media screen and (max-width: 1000px) {
   .quote-container {
