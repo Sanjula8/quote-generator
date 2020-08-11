@@ -1,6 +1,6 @@
 # Quote Generator
 
-[]!(/screenshot/screenshot.png)
+![](/screenshot/screenshot.png)
 
 A simple quote generator using pure Javascript with a little bit of SASS thrown in.
 
