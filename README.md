@@ -8,9 +8,6 @@ A simple quote generator using pure Javascript with a little bit of SASS thrown 
 
 [Github Pages](https://sanjula8.github.io/quote-generator/)
 
-[![Contributors][contributors-shield]][contributors-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 ## License
 
 None
@@ -20,6 +17,9 @@ None
 Email: [sanjula8@gmail.com](sanjula8@gmail.com)
 
 Project Link: [https://github.com/Sanjula8/Burger](https://github.com/Sanjula8/Burger)
+
+[![Contributors][contributors-shield]][contributors-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 ## Acknowledgements
 
